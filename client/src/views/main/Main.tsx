@@ -1,17 +1,21 @@
 import styles from "./main.module.css";
 import video from "../../assets/video.mp4";
 import Buttons from "../../components/buttons/Buttons";
+import logo from '../../assets/logo-jamy.png'
 
 const Main = () => {
   return (
     <section className={styles.main}>
-        <span className={styles.jamy}>JAMY-SHARE</span>
-      <div className={`${styles.descrip} flex flex-col justify-center gap-5 px-6 text-white`}>
+        <span className={styles.jamy}>
+          <img className="w-9" src={logo} alt="" />
+          <h3>JAMY-SHARE</h3>
+        </span>
+      <div className={`${styles.descrip} flex flex-col justify-center gap-5 px-8 text-white`}>
         <h2>AYER ERA TARDE</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, pariatur impedit quam dignissimos harum necessitatibus tenetur sint animi, exercitationem, quidem ad itaque alias dolorum. Atque repudiandae facere qui fuga nisi?</p>
-        <span className="flex gap-5">
-            <Buttons url="#" title="Login" />
+        <p>Comparte contenido relacionado con el mundo deportivo, intercambia conocimientos y disfruta de la pasion por el deporte, Unete a nuestra comunidad y comparte tu amor por los deportes.</p>
+        <span className={`${styles.btns} flex gap-5`}>
             <Buttons url="#" title="Start" />
+            <Buttons url="#" title="Login" />
         </span>
       </div>
       <video muted autoPlay loop>
