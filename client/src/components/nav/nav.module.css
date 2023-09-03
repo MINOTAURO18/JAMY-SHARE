@@ -1,0 +1,11 @@
+.nav{
+    position: absolute;
+    left: 5px;
+    min-height: 95vh;
+    border-radius: 10px;
+}
+
+.navOpen{
+    width: 70px;
+
+}
