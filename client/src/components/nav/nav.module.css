@@ -1,9 +1,9 @@
 .nav{
-    background:linear-gradient(120deg, rgb(0, 21, 37), rgb(0, 65, 116));
+    background:linear-gradient(120deg, rgb(1, 49, 85), rgb(2, 94, 165));
     position: absolute;
-    left: 5px;
+    left: 0px;
     min-height: 90vh;
-    border-radius: 10px;
+    border-radius: 0 15px 15px 0;
     padding: 10px 16px;
     display: flex;
     flex-direction: column;

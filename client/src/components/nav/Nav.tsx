@@ -5,7 +5,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { BsPlusSquareFill } from "react-icons/bs";
 import { FaSignOutAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import JamyIcon from "../Jamy";
+import {GiAlliedStar} from 'react-icons/gi'
 import styles from './nav.module.css'
 
 const Nav = () => {
@@ -13,7 +13,7 @@ const Nav = () => {
     { name: "Home", link: "/", icon: AiFillHome },
     { name: "Profile", link: "/", icon: BsFillPersonFill },
     { name: "Post", link: "/", icon: BsPlusSquareFill },
-    // { name: "Go out", link: "/", svg: JamyIcon },
+    { name: "About", link: "/", icon: GiAlliedStar },
    
   ];
 
@@ -23,7 +23,7 @@ const Nav = () => {
     <section className="flex h-screen items-center">
       <nav
         className={`bg-[#0e0e0e]  ${
-          open ? "w-72" : `${styles.navOpen}`
+          open ? "w-60" : `${styles.navOpen}`
         } duration-500 text-gray-100 px-4 ${styles.nav}`}
       >
         <div className="py-3 flex justify-end">
@@ -40,7 +40,8 @@ const Nav = () => {
               key={i}
               className={` group flex items-center text-sm  gap-5 font-medium p-2  rounded-md`}
             >
-              <div>{React.createElement(menu?.icon, { size: "25" })}  </div> 
+              <div>{React.createElement(menu?.icon, { size: "25" })}</div> 
+           
               <h3
                 style={{
                   transitionDelay: `${i + 3}00ms`,
