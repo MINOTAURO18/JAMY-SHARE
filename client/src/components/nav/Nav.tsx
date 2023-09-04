@@ -10,17 +10,17 @@ import styles from './nav.module.css'
 
 const Nav = () => {
   const menus = [
-    { name: "Home", link: "/", icon: AiFillHome },
-    { name: "Profile", link: "/", icon: BsFillPersonFill },
-    { name: "Post", link: "/", icon: BsPlusSquareFill },
-    { name: "About", link: "/", icon: BsFillStarFill },
+    { name: "Home", link: "/home", icon: AiFillHome },
+    { name: "Profile", link: "/profile", icon: BsFillPersonFill },
+    { name: "Post", link: "/posts", icon: BsPlusSquareFill },
+    { name: "About", link: "/about", icon: BsFillStarFill },
    
   ];
 
   const goOut = [{ name: "Go out", link: "/", icon: FaSignOutAlt },]
   const [open, setOpen] = useState(false);  
   return (
-    <section className="flex h-screen items-center">
+    <header>
       <nav
         className={`bg-[#0e0e0e]  ${
           open ? "w-60" : `${styles.navOpen}`
@@ -46,7 +46,7 @@ const Nav = () => {
                 style={{
                   transitionDelay: `${i + 3}00ms`,
                 }}
-                className={`whitespace-pre text-base font-bold hover:text-gray-300  ${
+                className={`whitespace-pre text-base font-bold hover:text-gray-300 duration-300 ${
                   !open && "opacity-0 translate-x-28 overflow-hidden"
                 }`}
               >
@@ -68,7 +68,7 @@ const Nav = () => {
                 style={{
                   transitionDelay: `${i + 3}00ms`,
                 }}
-                className={`whitespace-pre duration-500 ${
+                className={`whitespace-pre text-base font-bold duration-500 ${
                   !open && "opacity-0 translate-x-28 overflow-hidden"
                 }`}
               >
@@ -80,14 +80,14 @@ const Nav = () => {
       </nav>
 
       <nav className={`${styles.mobile}`}>
-          <Link to='#'> <div>{React.createElement(AiFillHome)}</div></Link>
-          <Link to='#'> <div>{React.createElement(BsFillPersonFill)}</div></Link>
-          <Link to='#'> <div>{React.createElement(BsPlusSquareFill)}</div></Link>
-          <Link to='#'> <div>{React.createElement(BsFillStarFill)}</div></Link>
-          <Link to='#'> <div>{React.createElement(FaSignOutAlt)}</div></Link>
+          <Link to='/home'> <div>{React.createElement(AiFillHome)}</div></Link>
+          <Link to='/profile'> <div>{React.createElement(BsFillPersonFill)}</div></Link>
+          <Link to='/posts'> <div>{React.createElement(BsPlusSquareFill)}</div></Link>
+          <Link to='/about'> <div>{React.createElement(BsFillStarFill)}</div></Link>
+          <Link to='/'> <div>{React.createElement(FaSignOutAlt)}</div></Link>
       </nav>
       
-    </section>
+    </header>
   );
 };
 

@@ -1,7 +1,12 @@
+
+
 .nav{
-    background:linear-gradient(50deg, rgb(0, 82, 145), rgb(0, 128, 226));
     position: absolute;
+    position:fixed;
+    background:linear-gradient(50deg, rgb(0, 82, 145), rgb(0, 128, 226));
     left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     min-height: 90vh;
     border-radius: 0 12px 12px 0;
     padding: 10px 16px;
@@ -9,6 +14,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
+    z-index: 9;
 }
 
 .mobile{
@@ -27,8 +33,10 @@
     }
 
     .mobile{
-        background:linear-gradient(50deg, rgb(0, 82, 145), rgb(0, 128, 226));
         position: absolute;
+        position: fixed;
+        z-index: 9;
+        background:linear-gradient(50deg, rgb(0, 82, 145), rgb(0, 128, 226));
         bottom: 10px;
         width: 95%;
         height: 8vh;

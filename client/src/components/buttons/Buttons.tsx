@@ -8,9 +8,7 @@ interface buttonProps {
    
   const Buttons: React.FC<buttonProps> = ({ title, url }) => {
     return (
-      <a target="_blank" href={url} className={styles.button}>
-        <button className="z-20">{title}</button>
-      </a>
+        <button className={`${styles.button} z-20`}>{title}</button>
     );
   };
 

@@ -1,0 +1,132 @@
+.about {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.myProfile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.myProfile img {
+    width: 220px;
+  border-radius: 50%;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.buttons button {
+  width: 110px;
+  height: 42px;
+  font-family: inherit;
+  font-size: 20px;
+  background:linear-gradient(90deg, rgb(0, 82, 145), rgb(0, 128, 226));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.buttons button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.buttons button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.buttons button:hover svg {
+  transform: translateX(1.2em);
+}
+
+.buttons button:hover span {
+  transform: translateX(5em);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .cards .red {
+    background-color: #f43f5e;
+  }
+  
+  .cards .blue {
+    background-color: #3b82f6;
+  }
+  
+  .cards .green {
+    background-color: #22c55e;
+  }
+  
+  .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100px;
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .cards .card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  .cards .card p.secondtext {
+    font-size: .7em;
+  }
+  
+  .cards .card:hover {
+    transform: scale(1.04, 1.04);
+  }
+  
+  .cards:hover > .card:not(:hover) {
+    filter: blur(1px);
+    transform: scale(0.9, 0.9);
+  }
