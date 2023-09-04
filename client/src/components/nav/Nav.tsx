@@ -5,7 +5,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { BsPlusSquareFill } from "react-icons/bs";
 import { FaSignOutAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import {GiAlliedStar} from 'react-icons/gi'
+import {BsFillStarFill} from 'react-icons/bs'
 import styles from './nav.module.css'
 
 const Nav = () => {
@@ -13,7 +13,7 @@ const Nav = () => {
     { name: "Home", link: "/", icon: AiFillHome },
     { name: "Profile", link: "/", icon: BsFillPersonFill },
     { name: "Post", link: "/", icon: BsPlusSquareFill },
-    { name: "About", link: "/", icon: GiAlliedStar },
+    { name: "About", link: "/", icon: BsFillStarFill },
    
   ];
 
@@ -24,7 +24,7 @@ const Nav = () => {
       <nav
         className={`bg-[#0e0e0e]  ${
           open ? "w-60" : `${styles.navOpen}`
-        } duration-500 text-gray-100 px-4 ${styles.nav}`}
+        } duration-500 text-white px-4 ${styles.nav}`}
       >
         <div className="py-3 flex justify-end">
           <HiMenuAlt3
@@ -46,19 +46,13 @@ const Nav = () => {
                 style={{
                   transitionDelay: `${i + 3}00ms`,
                 }}
-                className={`whitespace-pre duration-500 ${
+                className={`whitespace-pre text-base font-bold hover:text-gray-300  ${
                   !open && "opacity-0 translate-x-28 overflow-hidden"
                 }`}
               >
                 {menu?.name}
               </h3>
-              <h3
-                className={`${
-                  open && "hidden"
-                } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit  `}
-              >
-                {menu?.name}
-              </h3>
+              
             </Link>
           ))}
         </div>
@@ -80,18 +74,18 @@ const Nav = () => {
               >
                 {out?.name}
               </h3>
-              <h3
-                className={`${
-                  open && "hidden"
-                } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit  `}
-              >
-                {out?.name}
-              </h3>
+              
             </Link>
           ))}
       </nav>
 
-
+      <nav className={`${styles.mobile}`}>
+          <Link to='#'> <div>{React.createElement(AiFillHome)}</div></Link>
+          <Link to='#'> <div>{React.createElement(BsFillPersonFill)}</div></Link>
+          <Link to='#'> <div>{React.createElement(BsPlusSquareFill)}</div></Link>
+          <Link to='#'> <div>{React.createElement(BsFillStarFill)}</div></Link>
+          <Link to='#'> <div>{React.createElement(FaSignOutAlt)}</div></Link>
+      </nav>
       
     </section>
   );
