@@ -12,6 +12,7 @@ import Posts from "./views/posts/Posts";
 import About from "./views/about/About";
 import Nav from "./components/nav/Nav";
 import Login from "./views/login/Login";
+import Account from "./views/account/Account";
 
 function App() {
   const location = useLocation();
@@ -35,7 +36,9 @@ function App() {
 
   return (
     <main className={darkMode ? "dark" : "white"}>
-      {location.pathname === "/" ? null : <Nav />}
+      {location.pathname === "/" || location.pathname === "/login" || location.pathname === "/account" ? null : (
+        <Nav />
+      )}
       <div className="darkMode" onClick={toggleDarkMode}>
         {React.createElement(darkMode ? BsFillSunFill : PiMoonFill)}
       </div>
@@ -101,6 +104,17 @@ function App() {
             <TransitionGroup>
               <CSSTransition key="login" classNames="fade" timeout={300}>
                 <Login />
+              </CSSTransition>
+            </TransitionGroup>
+          }
+        />
+
+        <Route
+          path="/account"
+          element={
+            <TransitionGroup>
+              <CSSTransition key="account" classNames="fade" timeout={300}>
+                <Account />
               </CSSTransition>
             </TransitionGroup>
           }

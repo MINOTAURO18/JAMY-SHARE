@@ -18,7 +18,7 @@ const Main = () => {
           <Link to='/home'>
             <Buttons url="#" title="Start" />
           </Link>
-          <Link to='/'>
+          <Link to='/login'>
             <Buttons url="#" title="Login" />
           </Link>
         </span>
@@ -26,7 +26,7 @@ const Main = () => {
       <video muted autoPlay loop>
         <source src={video} type="video/mp4" />
       </video>
-      <div className="capa"></div>
+      <div className={styles.capa}></div>
     </section>
   );
 };
