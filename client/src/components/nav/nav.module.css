@@ -26,6 +26,12 @@
 
 }
 
+.logos:hover{
+   transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
+
+
 @media (width < 600px) {
 
     .nav{

@@ -40,7 +40,7 @@ const Nav = () => {
               key={i}
               className={` group flex items-center text-sm  gap-5 font-medium p-2  rounded-md`}
             >
-              <div>{React.createElement(menu?.icon, { size: "25" })}</div> 
+              <div >{React.createElement(menu?.icon, { size: "25" })}</div> 
            
               <h3
                 style={{
