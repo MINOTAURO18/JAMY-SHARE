@@ -12,27 +12,27 @@ const Account = () => {
       </article>
       <div className={`${styles.formbox}`}>
         <form className={`${styles.form}`}>
-          <span className={`${styles.title}`}>Sign up</span>
-          <span className={`${styles.subtitle}`}>
+          <span className={`${styles.title} text-white`}>Sign up</span>
+          <span className={`${styles.subtitle} text-white`}>
             Create a free account with your email.
           </span>
           <div className={`${styles.formcontainer}`}>
             <input
               type="text"
               className={`${styles.input}`}
-              placeholder="Full Name"
+              placeholder="Name"
             />
             <input
               type="email"
               className={`${styles.input}`}
               placeholder="Email"
             />
-            <input type="password" className="input" placeholder="Password" />
+            <input type="password" className={`${styles.input}`} placeholder="Password" />
           </div>
           <button>Sign up</button>
         </form>
         <div className={`${styles.formsection}`}>
-          <p>
+          <p className="text-white">
             Have an account? <a href="">Log in</a>{" "}
           </p>
         </div>
