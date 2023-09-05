@@ -13,6 +13,7 @@
 .dark {
   background-color: rgb(1, 12, 29);
   transition: all 0.3s ease-in-out;
+  color:white;
 }
 .white {
   background-color: rgb(236, 242, 243);

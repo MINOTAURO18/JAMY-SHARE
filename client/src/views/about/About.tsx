@@ -2,6 +2,15 @@ import React from "react";
 import styles from "./about.module.css";
 import myProfile from "../../assets/alex.jpeg";
 import { BiLogoGmail, BiCoffeeTogo } from "react-icons/bi";
+import {BsYoutube, BsLinkedin, BsGithub} from 'react-icons/bs'
+
+const urls = 
+  {
+    linkedin: 'https://www.linkedin.com/in/alexander-mu%C3%B1oz-4959a0255/',
+    github: 'https://github.com/MINOTAURO18',
+    youtube: 'https://www.youtube.com/channel/UC2KuDBEK0LJ8ZMku3KnrHMw'
+  }
+
 
 const About = () => {
   return (
@@ -15,20 +24,17 @@ const About = () => {
         nesciunt maiores.
       </p>
       <div className={`${styles.cards} `}>
-        <div className={`${styles.card} ${styles.red}`}>
-          <p className={`${styles.tip}`}>Hover Me</p>
-          <p className={`${styles.secondtext}`}>Lorem Ipsum</p>
-        </div>
+        <a href={urls.linkedin} target="_blank" className={`${styles.card} ${styles.blue}`}>
+          <p className={`${styles.tip}`}>{React.createElement(BsLinkedin,  { size: "25" })}</p>
+        </a>
 
-        <div className={`${styles.card} ${styles.red}`}>
-          <p className={`${styles.tip}`}>Hover Me</p>
-          <p className={`${styles.secondtext}`}>Lorem Ipsum</p>
-        </div>
+        <a href={urls.github} target="_blank" className={`${styles.card} ${styles.blue}`}>
+          <p className={`${styles.tip}`}>{React.createElement(BsGithub,  { size: "25" })}</p>
+        </a>
 
-        <div className={`${styles.card} ${styles.red}`}>
-          <p className={`${styles.tip}`}>Hover Me</p>
-          <p className={`${styles.secondtext}`}>Lorem Ipsum</p>
-        </div>
+        <a href={urls.youtube} target="_blank" className={`${styles.card} ${styles.blue}`}>
+          <p className={`${styles.tip}`}>{React.createElement(BsYoutube,  { size: "25" })}</p>
+        </a>
       </div>
 
       <span className={`${styles.buttons}`}>
