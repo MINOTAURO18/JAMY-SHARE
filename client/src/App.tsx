@@ -9,11 +9,12 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { useState, useEffect } from "react";
 import Profile from "./views/profile/Profile";
 import Posts from "./views/posts/Posts";
-import About from './views/about/About'
+import About from "./views/about/About";
 import Nav from "./components/nav/Nav";
+import Login from "./views/login/Login";
 
 function App() {
-  const location = useLocation()
+  const location = useLocation();
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem("darkMode");
     return savedMode ? JSON.parse(savedMode) : false;
@@ -34,9 +35,7 @@ function App() {
 
   return (
     <main className={darkMode ? "dark" : "white"}>
-      {
-      location.pathname === '/' ? null : <Nav/>
-      }
+      {location.pathname === "/" ? null : <Nav />}
       <div className="darkMode" onClick={toggleDarkMode}>
         {React.createElement(darkMode ? BsFillSunFill : PiMoonFill)}
       </div>
@@ -79,7 +78,7 @@ function App() {
           element={
             <TransitionGroup>
               <CSSTransition key="post" classNames="fade" timeout={300}>
-                <Posts/>
+                <Posts />
               </CSSTransition>
             </TransitionGroup>
           }
@@ -91,6 +90,17 @@ function App() {
             <TransitionGroup>
               <CSSTransition key="about" classNames="fade" timeout={300}>
                 <About />
+              </CSSTransition>
+            </TransitionGroup>
+          }
+        />
+
+        <Route
+          path="/login"
+          element={
+            <TransitionGroup>
+              <CSSTransition key="login" classNames="fade" timeout={300}>
+                <Login />
               </CSSTransition>
             </TransitionGroup>
           }
